@@ -17,6 +17,20 @@ Basic authentication should be used and all requests must be over a https connec
 All requests return the current state of the sauna in JSON: 
 ({"statusCode": 232, "door": true, "temperature": "23", "targetTemperature": "50", "startDate": 1507184846, "endDate": 1507184846, "duration": 0, "config": 2, "steamerError": 0, "paymentEndDate" : SOMEDATE})
 
+**temperature:** The current temperature of the sauna
+
+**targetTemperature:** The temperature the sauna is trying to reach
+
+**startDate:** heating start time in UNIX
+
+**endDate:** heating end time
+
+**duration:** time of the remaining heating period
+
+**steamerError:** if 1 then the steamer is empty of water and needs to be refilled also no steamer start is allowed
+
+**paymentEndDate:** shows the date when the payment period is ending. Only relevant for GSM controllers with our SIM card.
+
 **statusCode:**
 * 230 - sauna offline
 * 231 - online and heating
@@ -28,21 +42,7 @@ All requests return the current state of the sauna in JSON:
 * true - the door is closed
 * false - the door is open and sauna can't be started
 
-**temperature:** The current temperature of the sauna
-
-**targetTemperature:** The temperature the sauna is trying to reach
-
-**startDate:** heating start time in UNIX
-
-**endDate:** heating end time
-
-**duration:** time of the remaining heating period
-
 **config:**
 * 1 shows that the controller is configured to use a steamer system
 * 2 shows that the controller is configured to use a light system
 * 3 shows that the controller is configured to use both the light and steamer system .
-
-**steamerError:** if 1 then the steamer is empty of water and needs to be refilled also no steamer start is allowed
-
-**paymentEndDate:** shows the date when the payment period is ending. Only relevant for GSM controllers with our SIM card.
