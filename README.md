@@ -1,25 +1,25 @@
-# HUUM Sauna Controller
+# HUUM Sauna Controller API
 
 Der UKU Wi-Fi Sauna Controller macht das Heizen der Sauna sehr einfach und komfortabel. Mit UKU können Sie Ihre Sauna vor Ort heizen oder dies von Ihrem Telefon aus über die HUUM Mobile App tun. Um die mobile App-Lösung nutzen zu können, muss die UKU mit einem Wi-Fi-Netzwerk verbunden sein. Die UKU bietet verschiedene Sicherheits- und Zusatzfunktionen für ein angenehmes Saunaerlebnis. Es kann mit Heizgeräten verschiedener Hersteller verwendet werden.
 
 
 
-GET - api.huum.eu/action/home/status - returns your current sauna status
+**GET - api.huum.eu/action/home/status ** - returns your current sauna status
 
-POST - api.huum.eu/action/home/start?targetTemperature=80 - wants targetTemperature as a parameter, which must be a number between 40 and 110, turns on the sauna for 3h
+**POST - api.huum.eu/action/home/start?targetTemperature=80 ** - wants targetTemperature as a parameter, which must be a number between 40 and 110, turns on the sauna for 3h
 
-POST - api.huum.eu/action/home/stop - turns off the sauna
+**POST - api.huum.eu/action/home/stop**- turns off the sauna
 
 Basic authentication should be used and all requests must be over a https connection. The username and password are the same as in the app and the user must be connected to a sauna.
 
 All requests return the current state of the sauna in JSON: ({"statusCode": 232, "door": true, "temperature": "23", "targetTemperature": "50", "startDate": 1507184846, "endDate": 1507184846, "duration": 0, "config": 2, "steamerError": 0, "paymentEndDate" : SOMEDATE})
 
-statusCode:
+**statusCode:**
 230 - sauna offline
 231 - online and heating
-232 sauna online but not heating
-233 sauna is beeing used by another user and is locked
-400 sauna is put to emergency stop
+232 - sauna online but not heating
+233 - sauna is beeing used by another user and is locked
+400 - sauna is put to emergency stop
 
 door:
 true - the door is closed
