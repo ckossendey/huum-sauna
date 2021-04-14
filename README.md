@@ -1,4 +1,7 @@
-# huum-sauna
+# HUUM Sauna Controller
+
+Der UKU Wi-Fi Sauna Controller macht das Heizen der Sauna sehr einfach und komfortabel. Mit UKU können Sie Ihre Sauna vor Ort heizen oder dies von Ihrem Telefon aus über die HUUM Mobile App tun. Um die mobile App-Lösung nutzen zu können, muss die UKU mit einem Wi-Fi-Netzwerk verbunden sein. Die UKU bietet verschiedene Sicherheits- und Zusatzfunktionen für ein angenehmes Saunaerlebnis. Es kann mit Heizgeräten verschiedener Hersteller verwendet werden.
+
 
 
 GET - api.huum.eu/action/home/status - returns your current sauna status
