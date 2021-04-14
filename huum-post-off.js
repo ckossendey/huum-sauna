@@ -20,8 +20,3 @@ axios.post(urlstart, data,
   .catch(function (error) {
     console.log(error);
   });
- 
- 
- 
- 
- 
