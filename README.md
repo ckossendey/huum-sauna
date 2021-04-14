@@ -24,9 +24,7 @@ All requests return the current state of the sauna in JSON:
 * 233 - sauna is beeing used by another user and is locked
 * 400 - sauna is put to emergency stop
 
-**door:**
-  * true - the door is closed
-  * false - the door is open and sauna can't be started
+**door:** true - the door is closed | false - the door is open and sauna can't be started
 
 * **temperature:** The current temperature of the sauna
 * **targetTemperature:** The temperature the sauna is trying to reach
