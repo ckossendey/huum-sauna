@@ -8,6 +8,8 @@ Der UKU Wi-Fi Sauna Controller macht das Heizen der Sauna sehr einfach und komfo
 
 **POST - api.huum.eu/action/home/start?targetTemperature=80** - wants targetTemperature as a parameter, which must be a number between 40 and 110, turns on the sauna for 3h
 
+`curl --user username:password https://api.huum.eu/action/home/start -d targetTemperature=70 -v`
+
 **POST - api.huum.eu/action/home/stop** - turns off the sauna
 
 Basic authentication should be used and all requests must be over a https connection. The username and password are the same as in the app and the user must be connected to a sauna.
